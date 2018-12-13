@@ -1,0 +1,40 @@
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\bin\Debug\DAL.dll.config
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\bin\Debug\DAL.dll
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\bin\Debug\DAL.pdb
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\bin\Debug\EntityFramework.dll
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\bin\Debug\Models.dll
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\bin\Debug\Models.pdb
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\bin\Debug\EntityFramework.xml
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\obj\Debug\DAL.dll
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\DAL\obj\Debug\DAL.pdb
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\DAL.dll.config
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\DAL.dll
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\DAL.pdb
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\Dapper.dll
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\EntityFramework.dll
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\Models.dll
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\Models.pdb
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\Dapper.xml
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\EntityFramework.xml
+C:\Users\masya\Documents\Locadora\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\masya\Documents\Locadora\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\masya\Documents\Locadora\DAL\obj\Debug\DAL.dll
+C:\Users\masya\Documents\Locadora\DAL\obj\Debug\DAL.pdb
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\DAL.dll.config
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\DAL.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\DAL.pdb
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\Dapper.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\EntityFramework.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\Models.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\Models.pdb
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\Dapper.xml
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\EntityFramework.xml
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\obj\Debug\DAL.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\DAL\obj\Debug\DAL.pdb

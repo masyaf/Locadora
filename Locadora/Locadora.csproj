@@ -1,0 +1,834 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1394518-2145-472B-BB98-10B10E4EBF8E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Locadora</RootNamespace>
+    <AssemblyName>Locadora</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="crdb_adoplus, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet1\crdb_adoplus.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cadastro\FRMCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FRMCidade.Designer.cs">
+      <DependentUpon>FRMCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FRMClassificacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FRMClassificacao.Designer.cs">
+      <DependentUpon>FRMClassificacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FRMCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FRMCliente.Designer.cs">
+      <DependentUpon>FRMCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FRMFilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FRMFilme.Designer.cs">
+      <DependentUpon>FRMFilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FRMFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FRMFuncionario.Designer.cs">
+      <DependentUpon>FRMFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FRMGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FRMGenero.Designer.cs">
+      <DependentUpon>FRMGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FRMGravadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FRMGravadora.Designer.cs">
+      <DependentUpon>FRMGravadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FRMTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FRMTipo.Designer.cs">
+      <DependentUpon>FRMTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\clsDados.cs" />
+    <Compile Include="FRMMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMMenu.Designer.cs">
+      <DependentUpon>FRMMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelView\MovieModelView.cs" />
+    <Compile Include="Movimento\FRMAluguel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimento\FRMAluguel.Designer.cs">
+      <DependentUpon>FRMAluguel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FRMPesquisa_Aluguel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FRMPesquisa_Aluguel.Designer.cs">
+      <DependentUpon>FRMPesquisa_Aluguel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FRMPesquisa_Cidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FRMPesquisa_Cidade.Designer.cs">
+      <DependentUpon>FRMPesquisa_Cidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FRMPesquisa_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FRMPesquisa_Cliente.Designer.cs">
+      <DependentUpon>FRMPesquisa_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FRMPesquisa_Filme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FRMPesquisa_Filme.Designer.cs">
+      <DependentUpon>FRMPesquisa_Filme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FRMPesquisa_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FRMPesquisa_Funcionario.Designer.cs">
+      <DependentUpon>FRMPesquisa_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cadastro\FRMCidade.resx">
+      <DependentUpon>FRMCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FRMClassificacao.resx">
+      <DependentUpon>FRMClassificacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FRMCliente.resx">
+      <DependentUpon>FRMCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FRMFilme.resx">
+      <DependentUpon>FRMFilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FRMFuncionario.resx">
+      <DependentUpon>FRMFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FRMGenero.resx">
+      <DependentUpon>FRMGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FRMGravadora.resx">
+      <DependentUpon>FRMGravadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FRMTipo.resx">
+      <DependentUpon>FRMTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMMenu.resx">
+      <DependentUpon>FRMMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimento\FRMAluguel.resx">
+      <DependentUpon>FRMAluguel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FRMPesquisa_Aluguel.resx">
+      <DependentUpon>FRMPesquisa_Aluguel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FRMPesquisa_Cidade.resx">
+      <DependentUpon>FRMPesquisa_Cidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FRMPesquisa_Cliente.resx">
+      <DependentUpon>FRMPesquisa_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FRMPesquisa_Filme.resx">
+      <DependentUpon>FRMPesquisa_Filme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FRMPesquisa_Funcionario.resx">
+      <DependentUpon>FRMPesquisa_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icones\004_spreadsheet_document.png" />
+    <Content Include="Icones\006_drawing_document.png" />
+    <Content Include="Icones\008_presentation_document.png" />
+    <Content Include="Icones\3floppy_mount.png" />
+    <Content Include="Icones\3floppy_unmount.png" />
+    <Content Include="Icones\about_32x32-32.png" />
+    <Content Include="Icones\add.png" />
+    <Content Include="Icones\address book_32x32-32.png" />
+    <Content Include="Icones\applications_32x32-32.png" />
+    <Content Include="Icones\applix.png" />
+    <Content Include="Icones\apps_32x32-32.png" />
+    <Content Include="Icones\app_32x32-32.png" />
+    <Content Include="Icones\archos_unmount.png" />
+    <Content Include="Icones\avancar 1.png" />
+    <Content Include="Icones\avancar.png" />
+    <Content Include="Icones\back_32x32-32.png" />
+    <Content Include="Icones\ball_green_32x32-32.png" />
+    <Content Include="Icones\ball_red_32x32-32.png" />
+    <Content Include="Icones\ball_yellow_32x32-32.png" />
+    <Content Include="Icones\binary.png" />
+    <Content Include="Icones\blockdevice.png" />
+    <Content Include="Icones\Boi.ico" />
+    <Content Include="Icones\calculator.png" />
+    <Content Include="Icones\calendar.png" />
+    <Content Include="Icones\cam.png" />
+    <Content Include="Icones\cancelar.png" />
+    <Content Include="Icones\Cartão.png" />
+    <Content Include="Icones\cd_32x32-32.png" />
+    <Content Include="Icones\Celular.png" />
+    <Content Include="Icones\chardevice.png" />
+    <Content Include="Icones\chart_32x32-32.png" />
+    <Content Include="Icones\chat_32x32-32.png" />
+    <Content Include="Icones\colorscm.png" />
+    <Content Include="Icones\computer_32x32-32.png" />
+    <Content Include="Icones\config.png" />
+    <Content Include="Icones\configure_32x32-32.png" />
+    <Content Include="Icones\connect_to_network.png" />
+    <Content Include="Icones\copy_32x32-32.png" />
+    <Content Include="Icones\core.png" />
+    <Content Include="Icones\Couple-128.png" />
+    <Content Include="Icones\cut_32x32-32.png" />
+    <Content Include="Icones\database_32x32-32.png" />
+    <Content Include="Icones\deb.png" />
+    <Content Include="Icones\del.png" />
+    <Content Include="Icones\desktop.png" />
+    <Content Include="Icones\desktop22.png" />
+    <Content Include="Icones\Dinheiro.png" />
+    <Content Include="Icones\document.png" />
+    <Content Include="Icones\document2.png" />
+    <Content Include="Icones\documents_32x32-32.png" />
+    <Content Include="Icones\download_32x32-32.png" />
+    <Content Include="Icones\down_32x32-32.png" />
+    <Content Include="Icones\dvd_mount.png" />
+    <Content Include="Icones\dvd_unmount.png" />
+    <Content Include="Icones\editar.png" />
+    <Content Include="Icones\emitente.png" />
+    <Content Include="Icones\empty.png" />
+    <Content Include="Icones\energy_32x32-32.png" />
+    <Content Include="Icones\estornar.png" />
+    <Content Include="Icones\excluir.png" />
+    <Content Include="Icones\exec.png" />
+    <Content Include="Icones\exec_wine.png" />
+    <Content Include="Icones\export_32x32-32.png" />
+    <Content Include="Icones\favorites.png" />
+    <Content Include="Icones\favorites_32x32-32.png" />
+    <Content Include="Icones\favorites_new_32x32-32.png" />
+    <Content Include="Icones\fax_32x32-32.png" />
+    <Content Include="Icones\files.png" />
+    <Content Include="Icones\file_apply_32x32-32.png" />
+    <Content Include="Icones\file_broken.png" />
+    <Content Include="Icones\file_cancel_32x32-32.png" />
+    <Content Include="Icones\file_del_32x32-32.png" />
+    <Content Include="Icones\file_find_32x32-32.png" />
+    <Content Include="Icones\file_locked.png" />
+    <Content Include="Icones\file_locked_32x32-32.png" />
+    <Content Include="Icones\file_temporary.png" />
+    <Content Include="Icones\file_temp_32x32-32.png" />
+    <Content Include="Icones\file_web_32x32-32.png" />
+    <Content Include="Icones\finalizar.png" />
+    <Content Include="Icones\flag_32x32-32.png" />
+    <Content Include="Icones\folder2_cool.png" />
+    <Content Include="Icones\folder2_crystal.png" />
+    <Content Include="Icones\folder2_green.png" />
+    <Content Include="Icones\folder2_grey.png" />
+    <Content Include="Icones\folder2_html.png" />
+    <Content Include="Icones\folder2_locked.png" />
+    <Content Include="Icones\folder2_midi.png" />
+    <Content Include="Icones\folder2_open.png" />
+    <Content Include="Icones\folder2_red.png" />
+    <Content Include="Icones\folder2_sound.png" />
+    <Content Include="Icones\folder2_video.png" />
+    <Content Include="Icones\folder2_violet.png" />
+    <Content Include="Icones\folder2_yellow.png" />
+    <Content Include="Icones\folder3.png" />
+    <Content Include="Icones\folder3_green.png" />
+    <Content Include="Icones\folder3_grey.png" />
+    <Content Include="Icones\folder3_red.png" />
+    <Content Include="Icones\folder3_violet.png" />
+    <Content Include="Icones\folder3_yellow.png" />
+    <Content Include="Icones\folder_32x32-32.png" />
+    <Content Include="Icones\folder_cd.png" />
+    <Content Include="Icones\folder_crystal.png" />
+    <Content Include="Icones\folder_find_32x32-32.png" />
+    <Content Include="Icones\folder_green.png" />
+    <Content Include="Icones\folder_grey.png" />
+    <Content Include="Icones\folder_home.png" />
+    <Content Include="Icones\folder_html.png" />
+    <Content Include="Icones\folder_image.png" />
+    <Content Include="Icones\folder_locked.png" />
+    <Content Include="Icones\folder_man.png" />
+    <Content Include="Icones\folder_midi.png" />
+    <Content Include="Icones\folder_new_32x32-32.png" />
+    <Content Include="Icones\folder_slin.png" />
+    <Content Include="Icones\fornecedores.gif" />
+    <Content Include="Icones\games_32x32-32.png" />
+    <Content Include="Icones\go_32x32-32.png" />
+    <Content Include="Icones\grupo.png" />
+    <Content Include="Icones\handheld.png" />
+    <Content Include="Icones\hard disk_32x32-32.png" />
+    <Content Include="Icones\hdd_mount.png" />
+    <Content Include="Icones\hdd_unmount.png" />
+    <Content Include="Icones\help_32x32-32.png" />
+    <Content Include="Icones\history_32x32-32.png" />
+    <Content Include="Icones\home_32x32-32.png" />
+    <Content Include="Icones\html.png" />
+    <Content Include="Icones\ICONES NOVOS\1588_128x128.png" />
+    <Content Include="Icones\ICONES NOVOS\6940_128x128.png" />
+    <Content Include="Icones\ICONES NOVOS\6953.ico" />
+    <Content Include="Icones\ICONES NOVOS\6953_128x128.png" />
+    <Content Include="Icones\ICONES NOVOS\6953_256x256.png" />
+    <Content Include="Icones\ICONES NOVOS\6960_128x128.png" />
+    <Content Include="Icones\ICONES NOVOS\6960_256x256.png" />
+    <Content Include="Icones\ICONES NOVOS\6960_64x64.png" />
+    <Content Include="Icones\ICONES NOVOS\6986_128x128.png" />
+    <Content Include="Icones\ICONES NOVOS\6986_64x64.png" />
+    <Content Include="Icones\ICONES NOVOS\7661_64x64.png" />
+    <Content Include="Icones\ICONES NOVOS\baixar.png" />
+    <Content Include="Icones\ICONES NOVOS\caixa.png" />
+    <Content Include="Icones\ICONES NOVOS\cheques.png" />
+    <Content Include="Icones\ICONES NOVOS\desktop.png" />
+    <Content Include="Icones\ICONES NOVOS\desktop2.png" />
+    <Content Include="Icones\ICONES NOVOS\Logo - ADMBOLSO.png" />
+    <Content Include="Icones\ICONES NOVOS\Logo-ADMBOLSO - ICON.ico" />
+    <Content Include="Icones\iconthemes.bmp" />
+    <Content Include="Icones\iconthemes.png" />
+    <Content Include="Icones\IE 73D.png" />
+    <Content Include="Icones\image.png" />
+    <Content Include="Icones\images.png" />
+    <Content Include="Icones\important.png" />
+    <Content Include="Icones\import_32x32-32.png" />
+    <Content Include="Icones\imprimir.png" />
+    <Content Include="Icones\indeximg.png" />
+    <Content Include="Icones\info.png" />
+    <Content Include="Icones\info2_32x32-32.png" />
+    <Content Include="Icones\input_devices_settings.png" />
+    <Content Include="Icones\iPhone.png" />
+    <Content Include="Icones\java.png" />
+    <Content Include="Icones\joystick.png" />
+    <Content Include="Icones\kappfinder.png" />
+    <Content Include="Icones\kasteroids.png" />
+    <Content Include="Icones\kate.png" />
+    <Content Include="Icones\kbackgammon_engine.png" />
+    <Content Include="Icones\kcalc.png" />
+    <Content Include="Icones\kchart.png" />
+    <Content Include="Icones\kcmdevices.png" />
+    <Content Include="Icones\kcmdf.png" />
+    <Content Include="Icones\kcmfontinst.png" />
+    <Content Include="Icones\kcmkicker.png" />
+    <Content Include="Icones\kcmkwm.png" />
+    <Content Include="Icones\kcmmemory.png" />
+    <Content Include="Icones\kcmmidi.png" />
+    <Content Include="Icones\kcmpartitions.png" />
+    <Content Include="Icones\kcmpci.png" />
+    <Content Include="Icones\kcmsound.png" />
+    <Content Include="Icones\kcmsystem.png" />
+    <Content Include="Icones\kcmx.png" />
+    <Content Include="Icones\kcoloredit.png" />
+    <Content Include="Icones\kcontrol.png" />
+    <Content Include="Icones\kdevelop.png" />
+    <Content Include="Icones\kdf.png" />
+    <Content Include="Icones\kdict.png" />
+    <Content Include="Icones\kdisknav.png" />
+    <Content Include="Icones\kdmconfig.png" />
+    <Content Include="Icones\kdvi.png" />
+    <Content Include="Icones\kedit.png" />
+    <Content Include="Icones\keditbookmarks.png" />
+    <Content Include="Icones\keyboard.png" />
+    <Content Include="Icones\keyboard_layout.png" />
+    <Content Include="Icones\key_32x32-32.png" />
+    <Content Include="Icones\key_bindings.png" />
+    <Content Include="Icones\kfind.png" />
+    <Content Include="Icones\kfloppy.png" />
+    <Content Include="Icones\kfm.png" />
+    <Content Include="Icones\kfm_home.png" />
+    <Content Include="Icones\kformula.png" />
+    <Content Include="Icones\kghostview.png" />
+    <Content Include="Icones\khelpcenter.png" />
+    <Content Include="Icones\kicker.png" />
+    <Content Include="Icones\kivio.png" />
+    <Content Include="Icones\kjobviewer.png" />
+    <Content Include="Icones\kjots.png" />
+    <Content Include="Icones\klaptopdaemon.png" />
+    <Content Include="Icones\klipper.png" />
+    <Content Include="Icones\kmail.png" />
+    <Content Include="Icones\kmenu.png" />
+    <Content Include="Icones\kmenuedit.png" />
+    <Content Include="Icones\kmix.png" />
+    <Content Include="Icones\kmultiple.png" />
+    <Content Include="Icones\knetconfig.png" />
+    <Content Include="Icones\knotify.png" />
+    <Content Include="Icones\konqueror.png" />
+    <Content Include="Icones\konsole.png" />
+    <Content Include="Icones\kopete.png" />
+    <Content Include="Icones\kpackage.png" />
+    <Content Include="Icones\kpat.png" />
+    <Content Include="Icones\kpersonalizer.png" />
+    <Content Include="Icones\kppp.png" />
+    <Content Include="Icones\kpresenter.png" />
+    <Content Include="Icones\krdc.png" />
+    <Content Include="Icones\krfb.png" />
+    <Content Include="Icones\kscd.png" />
+    <Content Include="Icones\kscreensaver.png" />
+    <Content Include="Icones\kservices.png" />
+    <Content Include="Icones\ksirc.png" />
+    <Content Include="Icones\ksmiletris.png" />
+    <Content Include="Icones\ksnapshot.png" />
+    <Content Include="Icones\kspread.png" />
+    <Content Include="Icones\ksysguard.png" />
+    <Content Include="Icones\ktalkd.png" />
+    <Content Include="Icones\kthememgr.png" />
+    <Content Include="Icones\ktip.png" />
+    <Content Include="Icones\kudesigner.png" />
+    <Content Include="Icones\kugar.png" />
+    <Content Include="Icones\kuser.png" />
+    <Content Include="Icones\kview.png" />
+    <Content Include="Icones\kviewshell.png" />
+    <Content Include="Icones\kvirc.png" />
+    <Content Include="Icones\kwrite.png" />
+    <Content Include="Icones\kxconfig.png" />
+    <Content Include="Icones\kxkb.png" />
+    <Content Include="Icones\laptop_batery.png" />
+    <Content Include="Icones\laptop_battery.png" />
+    <Content Include="Icones\large_icons_32x32-32.png" />
+    <Content Include="Icones\launch.png" />
+    <Content Include="Icones\licq.png" />
+    <Content Include="Icones\Limão.png" />
+    <Content Include="Icones\linneighborhood.png" />
+    <Content Include="Icones\linuxconf.png" />
+    <Content Include="Icones\list.png" />
+    <Content Include="Icones\locale.png" />
+    <Content Include="Icones\locationbar_erase.png" />
+    <Content Include="Icones\lock.png" />
+    <Content Include="Icones\lock_32x32-32.png" />
+    <Content Include="Icones\log.png" />
+    <Content Include="Icones\looknfeel.png" />
+    <Content Include="Icones\mac.png" />
+    <Content Include="Icones\mail.png" />
+    <Content Include="Icones\mail_32x32-32.png" />
+    <Content Include="Icones\mail_delete.png" />
+    <Content Include="Icones\mail_find.png" />
+    <Content Include="Icones\mail_foward.png" />
+    <Content Include="Icones\mail_generic.png" />
+    <Content Include="Icones\mail_get.png" />
+    <Content Include="Icones\mail_new.png" />
+    <Content Include="Icones\mail_replay.png" />
+    <Content Include="Icones\mail_replayall.png" />
+    <Content Include="Icones\mail_send.png" />
+    <Content Include="Icones\Mais.png" />
+    <Content Include="Icones\make.png" />
+    <Content Include="Icones\make_kdevelop.png" />
+    <Content Include="Icones\man.png" />
+    <Content Include="Icones\map_32x32-32.png" />
+    <Content Include="Icones\Melancia.png" />
+    <Content Include="Icones\memory.png" />
+    <Content Include="Icones\message.png" />
+    <Content Include="Icones\message2.png" />
+    <Content Include="Icones\midi.png" />
+    <Content Include="Icones\mime_audio.png" />
+    <Content Include="Icones\mime_track.png" />
+    <Content Include="Icones\mime_video.png" />
+    <Content Include="Icones\misc.png" />
+    <Content Include="Icones\misc_doc.png" />
+    <Content Include="Icones\Modem.png" />
+    <Content Include="Icones\money_32x32-32.png" />
+    <Content Include="Icones\month.png" />
+    <Content Include="Icones\mouse.png" />
+    <Content Include="Icones\mouse1.png" />
+    <Content Include="Icones\movimentacao.png" />
+    <Content Include="Icones\mozilla-m.png" />
+    <Content Include="Icones\mozilla-mail.png" />
+    <Content Include="Icones\mozilla.png" />
+    <Content Include="Icones\mozillacrystal.png" />
+    <Content Include="Icones\multimedia.png" />
+    <Content Include="Icones\music2_32x32-32.png" />
+    <Content Include="Icones\music_32x32-32.png" />
+    <Content Include="Icones\mycomputer.png" />
+    <Content Include="Icones\my_mac.png" />
+    <Content Include="Icones\nautilus.png" />
+    <Content Include="Icones\netscape.png" />
+    <Content Include="Icones\netscape_doc.png" />
+    <Content Include="Icones\Network.png" />
+    <Content Include="Icones\network1.png" />
+    <Content Include="Icones\network_32x32-32.png" />
+    <Content Include="Icones\network_app_32x32-32.png" />
+    <Content Include="Icones\network_find_32x32-32.png" />
+    <Content Include="Icones\network_local.png" />
+    <Content Include="Icones\newtodo.png" />
+    <Content Include="Icones\new_32x32-32.png" />
+    <Content Include="Icones\nfs_mount.png" />
+    <Content Include="Icones\nfs_unmount.png" />
+    <Content Include="Icones\noatun.png" />
+    <Content Include="Icones\note.png" />
+    <Content Include="Icones\notepad_32x32-32.png" />
+    <Content Include="Icones\novo.png" />
+    <Content Include="Icones\object_32x32-32.png" />
+    <Content Include="Icones\openoffice.png" />
+    <Content Include="Icones\openterm.png" />
+    <Content Include="Icones\open_32x32-32.png" />
+    <Content Include="Icones\opera.png" />
+    <Content Include="Icones\options_32x32-32.png" />
+    <Content Include="Icones\pack2_32x32-32.png" />
+    <Content Include="Icones\package.png" />
+    <Content Include="Icones\package_applications.png" />
+    <Content Include="Icones\package_favourite.png" />
+    <Content Include="Icones\package_games.png" />
+    <Content Include="Icones\package_games_card.png" />
+    <Content Include="Icones\package_multimedia.png" />
+    <Content Include="Icones\package_network.png" />
+    <Content Include="Icones\package_settings.png" />
+    <Content Include="Icones\package_system.png" />
+    <Content Include="Icones\package_toys.png" />
+    <Content Include="Icones\package_wordprocessing.png" />
+    <Content Include="Icones\pack_32x32-32.png" />
+    <Content Include="Icones\paint_32x32-32.png" />
+    <Content Include="Icones\password.png" />
+    <Content Include="Icones\paste_32x32-32.png" />
+    <Content Include="Icones\pause_32x32-32.png" />
+    <Content Include="Icones\pda.png" />
+    <Content Include="Icones\pdf.png" />
+    <Content Include="Icones\penguin.png" />
+    <Content Include="Icones\personal.png" />
+    <Content Include="Icones\pesquisar.png" />
+    <Content Include="Icones\phone_32x32-32.png" />
+    <Content Include="Icones\phppg.png" />
+    <Content Include="Icones\pictures_32x32-32.png" />
+    <Content Include="Icones\play_32x32-32.png" />
+    <Content Include="Icones\Plus.png" />
+    <Content Include="Icones\postscript.png" />
+    <Content Include="Icones\pppoeconfig.png" />
+    <Content Include="Icones\preferences_32x32-32.png" />
+    <Content Include="Icones\printer1.png" />
+    <Content Include="Icones\printmgr.png" />
+    <Content Include="Icones\print_32x32-32.png" />
+    <Content Include="Icones\print_preview_32x32-32.png" />
+    <Content Include="Icones\print_printer.png" />
+    <Content Include="Icones\Private.png" />
+    <Content Include="Icones\produtos.gif" />
+    <Content Include="Icones\project_open.png" />
+    <Content Include="Icones\proxy.png" />
+    <Content Include="Icones\pysol.png" />
+    <Content Include="Icones\queue.png" />
+    <Content Include="Icones\quicktime.png" />
+    <Content Include="Icones\readme.png" />
+    <Content Include="Icones\real.png" />
+    <Content Include="Icones\realplayer.png" />
+    <Content Include="Icones\real_doc.png" />
+    <Content Include="Icones\rebuild.png" />
+    <Content Include="Icones\recycled.png" />
+    <Content Include="Icones\redo.png" />
+    <Content Include="Icones\redo_32x32-32.png" />
+    <Content Include="Icones\refresh_32x32-32.png" />
+    <Content Include="Icones\reload.png" />
+    <Content Include="Icones\reload_page.png" />
+    <Content Include="Icones\resource.png" />
+    <Content Include="Icones\rewind_32x32-32.png" />
+    <Content Include="Icones\rpm.png" />
+    <Content Include="Icones\run.png" />
+    <Content Include="Icones\sair.png" />
+    <Content Include="Icones\salvar.png" />
+    <Content Include="Icones\samba.png" />
+    <Content Include="Icones\Samples\App-iTunes.png" />
+    <Content Include="Icones\Samples\App-TextEdit.png" />
+    <Content Include="Icones\Samples\Briefcase.png" />
+    <Content Include="Icones\Samples\Capture.png" />
+    <Content Include="Icones\Samples\Clock.png" />
+    <Content Include="Icones\Samples\Desktop.png" />
+    <Content Include="Icones\Samples\DesktopModules.png" />
+    <Content Include="Icones\Samples\Document-Adobe.png" />
+    <Content Include="Icones\Samples\Document-Archive.png" />
+    <Content Include="Icones\Samples\Document-Audio.png" />
+    <Content Include="Icones\Samples\Document-AV.png" />
+    <Content Include="Icones\Samples\Document-Cubes.png" />
+    <Content Include="Icones\Samples\Document-Desktop.png" />
+    <Content Include="Icones\Samples\Document-DesktopPicture.png" />
+    <Content Include="Icones\Samples\Document-eMail.png" />
+    <Content Include="Icones\Samples\Document-Excel.png" />
+    <Content Include="Icones\Samples\Document-File Manager.png" />
+    <Content Include="Icones\Samples\Document-Font.png" />
+    <Content Include="Icones\Samples\Document-History.png" />
+    <Content Include="Icones\Samples\Document-Icon.png" />
+    <Content Include="Icones\Samples\Document-Info-Prefs.png" />
+    <Content Include="Icones\Samples\Document-Info.png" />
+    <Content Include="Icones\Samples\Document-INI.png" />
+    <Content Include="Icones\Samples\Document-LoginSettings.png" />
+    <Content Include="Icones\Samples\Document-Misc.png" />
+    <Content Include="Icones\Samples\Document-Movie.png" />
+    <Content Include="Icones\Samples\Document-Movie1.png" />
+    <Content Include="Icones\Samples\Document-Music.png" />
+    <Content Include="Icones\Samples\Document-Music1.png" />
+    <Content Include="Icones\Samples\Document-Paint.png" />
+    <Content Include="Icones\Samples\Document-Photoshop.png" />
+    <Content Include="Icones\Samples\Document-Picture.png" />
+    <Content Include="Icones\Samples\Document-Picture1.png" />
+    <Content Include="Icones\Samples\Document-Picture2.png" />
+    <Content Include="Icones\Samples\Document-Picture3.png" />
+    <Content Include="Icones\Samples\Document-RTF.png" />
+    <Content Include="Icones\Samples\Document-Script-VB.png" />
+    <Content Include="Icones\Samples\Document-Terminal-Settings.png" />
+    <Content Include="Icones\Samples\Document-Terminal.png" />
+    <Content Include="Icones\Samples\Document-Theme.png" />
+    <Content Include="Icones\Samples\Document-Trash.png" />
+    <Content Include="Icones\Samples\Document-Web.png" />
+    <Content Include="Icones\Samples\Document-WindowsMedia.png" />
+    <Content Include="Icones\Samples\Document-Word.png" />
+    <Content Include="Icones\Samples\Document.png" />
+    <Content Include="Icones\Samples\Drive-Ext-Disc.png" />
+    <Content Include="Icones\Samples\Drive-Ext-FD3.png" />
+    <Content Include="Icones\Samples\Drive-Ext-FD5.png" />
+    <Content Include="Icones\Samples\Drive-Ext-Mem.png" />
+    <Content Include="Icones\Samples\Drive-Ext-Network-Offline.png" />
+    <Content Include="Icones\Samples\Drive-Ext-Network.png" />
+    <Content Include="Icones\Samples\Drive-Ext-ZIP.png" />
+    <Content Include="Icones\Samples\Drive-Ext.png" />
+    <Content Include="Icones\Samples\Find.png" />
+    <Content Include="Icones\Samples\Folder-Apps-Shared.png" />
+    <Content Include="Icones\Samples\Folder-Apps.png" />
+    <Content Include="Icones\Samples\Folder-Calendar.png" />
+    <Content Include="Icones\Samples\Folder-Camera.png" />
+    <Content Include="Icones\Samples\Folder-def-closed.png" />
+    <Content Include="Icones\Samples\Folder-def-open.png" />
+    <Content Include="Icones\Samples\Folder-Document-History.png" />
+    <Content Include="Icones\Samples\Folder-Documents.png" />
+    <Content Include="Icones\Samples\Folder-Favorites.png" />
+    <Content Include="Icones\Samples\Folder-Fonts.png" />
+    <Content Include="Icones\Samples\Folder-History.png" />
+    <Content Include="Icones\Samples\Folder-Java.png" />
+    <Content Include="Icones\Samples\Folder-Movies-Shared.png" />
+    <Content Include="Icones\Samples\Folder-Movies.png" />
+    <Content Include="Icones\Samples\Folder-Music-Shared.png" />
+    <Content Include="Icones\Samples\Folder-Music.png" />
+    <Content Include="Icones\Samples\Folder-Network-History.png" />
+    <Content Include="Icones\Samples\Folder-Network.png" />
+    <Content Include="Icones\Samples\Folder-Pictures-Shared.png" />
+    <Content Include="Icones\Samples\Folder-Pictures.png" />
+    <Content Include="Icones\Samples\Folder-Prefs-Hardware.png" />
+    <Content Include="Icones\Samples\Folder-Prefs.png" />
+    <Content Include="Icones\Samples\Folder-Print.png" />
+    <Content Include="Icones\Samples\Folder-Settings.png" />
+    <Content Include="Icones\Samples\Hardware-PDA.png" />
+    <Content Include="Icones\Samples\icons_readme.txt" />
+    <Content Include="Icones\Samples\Information.png" />
+    <Content Include="Icones\Samples\Mail-Blue.png" />
+    <Content Include="Icones\Samples\Mail-Empty.png" />
+    <Content Include="Icones\Samples\Mail-Full.png" />
+    <Content Include="Icones\Samples\Mail.png" />
+    <Content Include="Icones\Samples\Meter.png" />
+    <Content Include="Icones\Samples\Misc-Arrow-Green.png" />
+    <Content Include="Icones\Samples\Misc-Arrow-Red.png" />
+    <Content Include="Icones\Samples\Network-Connections.png" />
+    <Content Include="Icones\Samples\Network-Local.png" />
+    <Content Include="Icones\Samples\Network-Shared.png" />
+    <Content Include="Icones\Samples\Network-Workgroup.png" />
+    <Content Include="Icones\Samples\Network.png" />
+    <Content Include="Icones\Samples\NxSeparator.png" />
+    <Content Include="Icones\Samples\Player_Eject.png" />
+    <Content Include="Icones\Samples\Player_Fwd.png" />
+    <Content Include="Icones\Samples\Player_Next.png" />
+    <Content Include="Icones\Samples\Player_Pause.png" />
+    <Content Include="Icones\Samples\Player_Play.png" />
+    <Content Include="Icones\Samples\Player_PlayList.png" />
+    <Content Include="Icones\Samples\Player_Prev.png" />
+    <Content Include="Icones\Samples\Player_Rew.png" />
+    <Content Include="Icones\Samples\Player_Stop.png" />
+    <Content Include="Icones\Samples\Player_VolDn.png" />
+    <Content Include="Icones\Samples\Player_VolUp.png" />
+    <Content Include="Icones\Samples\Prefs-Config.png" />
+    <Content Include="Icones\Samples\Prefs-Display.png" />
+    <Content Include="Icones\Samples\Prefs-EnergySaver.png" />
+    <Content Include="Icones\Samples\Prefs-Hardware.png" />
+    <Content Include="Icones\Samples\Prefs-Login.png" />
+    <Content Include="Icones\Samples\Prefs-Print.png" />
+    <Content Include="Icones\Samples\Prefs-Startmenu.png" />
+    <Content Include="Icones\Samples\Prefs.png" />
+    <Content Include="Icones\Samples\Question-Mark.png" />
+    <Content Include="Icones\Samples\Security.png" />
+    <Content Include="Icones\Samples\Shutdown.png" />
+    <Content Include="Icones\Samples\System.png" />
+    <Content Include="Icones\Samples\Themes-Web.png" />
+    <Content Include="Icones\Samples\Trash-Empty-2.png" />
+    <Content Include="Icones\Samples\Trash-Empty.png" />
+    <Content Include="Icones\Samples\Trash-Full-2.png" />
+    <Content Include="Icones\Samples\Trash-Full.png" />
+    <Content Include="Icones\Samples\WinAmp.png" />
+    <Content Include="Icones\Samples\Windows.png" />
+    <Content Include="Icones\Samples\Wireless.png" />
+    <Content Include="Icones\save_32x32-32.png" />
+    <Content Include="Icones\save_as_2_32x32-32.png" />
+    <Content Include="Icones\scanner.png" />
+    <Content Include="Icones\search.png" />
+    <Content Include="Icones\shopping cart_32x32-32.png" />
+    <Content Include="Icones\soffice.png" />
+    <Content Include="Icones\star_32x32-32.png" />
+    <Content Include="Icones\stock_templates-36.png" />
+    <Content Include="Icones\stop_32x32-32.png" />
+    <Content Include="Icones\style.png" />
+    <Content Include="Icones\stylesheet.png" />
+    <Content Include="Icones\SuSEconf.png" />
+    <Content Include="Icones\susehelpcenter.png" />
+    <Content Include="Icones\synaptic.png" />
+    <Content Include="Icones\tables_32.png" />
+    <Content Include="Icones\tablet.png" />
+    <Content Include="Icones\terminal.png" />
+    <Content Include="Icones\today.png" />
+    <Content Include="Icones\todo.png" />
+    <Content Include="Icones\toggle_log.png" />
+    <Content Include="Icones\tools_32x32-32.png" />
+    <Content Include="Icones\trash_32x32-32.png" />
+    <Content Include="Icones\undo.png" />
+    <Content Include="Icones\undo_32x32-32.png" />
+    <Content Include="Icones\unlock.png" />
+    <Content Include="Icones\unlocked_32x32-32.png" />
+    <Content Include="Icones\up.png" />
+    <Content Include="Icones\upload_32x32-32.png" />
+    <Content Include="Icones\up_32x32-32.png" />
+    <Content Include="Icones\user.png" />
+    <Content Include="Icones\usuario.png" />
+    <Content Include="Icones\vendas.gif" />
+    <Content Include="Icones\viewmag-.png" />
+    <Content Include="Icones\viewmag.png" />
+    <Content Include="Icones\viewmag1.png" />
+    <Content Include="Icones\viewmagfit.png" />
+    <Content Include="Icones\viewmag_002.png" />
+    <Content Include="Icones\view_bottom.png" />
+    <Content Include="Icones\view_choose.png" />
+    <Content Include="Icones\view_detailed.png" />
+    <Content Include="Icones\view_icon.png" />
+    <Content Include="Icones\view_left_right.png" />
+    <Content Include="Icones\view_multicolumn.png" />
+    <Content Include="Icones\view_right.png" />
+    <Content Include="Icones\view_sidetree.png" />
+    <Content Include="Icones\view_text.png" />
+    <Content Include="Icones\view_tree.png" />
+    <Content Include="Icones\vmware.png" />
+    <Content Include="Icones\voltar.png" />
+    <Content Include="Icones\web_conect_32x32-32.png" />
+    <Content Include="Icones\web_link_32x32-32.png" />
+    <Content Include="Icones\web_server_32x32-32.png" />
+    <Content Include="Icones\whatsnext.png" />
+    <Content Include="Icones\window_fullscreen.png" />
+    <Content Include="Icones\window_list.png" />
+    <Content Include="Icones\window_new.png" />
+    <Content Include="Icones\window_nofullscreen.png" />
+    <Content Include="Icones\wine.png" />
+    <Content Include="Icones\winprops.png" />
+    <Content Include="Icones\win_apps.png" />
+    <Content Include="Icones\wizard_32x32-32.png" />
+    <Content Include="Icones\wp.png" />
+    <Content Include="Icones\x.png" />
+    <Content Include="Icones\xapp.png" />
+    <Content Include="Icones\xcalc.png" />
+    <Content Include="Icones\xchat.png" />
+    <Content Include="Icones\xclock.png" />
+    <Content Include="Icones\xedit.png" />
+    <Content Include="Icones\xeyes.png" />
+    <Content Include="Icones\xfig.png" />
+    <Content Include="Icones\xfmail.png" />
+    <Content Include="Icones\xmms.png" />
+    <Content Include="Icones\xpaint.png" />
+    <Content Include="Icones\yast_partitioner.png" />
+    <Content Include="Icones\zip_mount.png" />
+    <Content Include="Icones\zip_unmount.png" />
+    <Content Include="Icones\zoom_in_32x32-32.png" />
+    <Content Include="Icones\zoom_out_32x32-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BBL\BLL.csproj">
+      <Project>{aa8ec41e-63e6-4d87-83a2-172753248645}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{0c685e86-890c-4297-9a6b-abf8c0eb1448}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

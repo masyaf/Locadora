@@ -1,0 +1,12 @@
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\Models\bin\Debug\Models.dll
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\Models\bin\Debug\Models.pdb
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\Models\obj\Debug\Models.dll
+C:\Users\masya\Music\SYS-DVD2000\SYS-DVD2000\Locadora\Models\obj\Debug\Models.pdb
+C:\Users\masya\Documents\Locadora\Models\bin\Debug\Models.dll
+C:\Users\masya\Documents\Locadora\Models\bin\Debug\Models.pdb
+C:\Users\masya\Documents\Locadora\Models\obj\Debug\Models.dll
+C:\Users\masya\Documents\Locadora\Models\obj\Debug\Models.pdb
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Models\bin\Debug\Models.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Models\bin\Debug\Models.pdb
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Models\obj\Debug\Models.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Models\obj\Debug\Models.pdb

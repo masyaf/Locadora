@@ -1,0 +1,28 @@
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\BBL.dll.config
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\BBL.dll
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\BBL.pdb
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\DAL.dll
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\EntityFramework.dll
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\Models.dll
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\DAL.pdb
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\Models.pdb
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\EntityFramework.xml
+C:\Users\masya\Documents\Locadora\BBL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\masya\Documents\Locadora\BBL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\masya\Documents\Locadora\BBL\obj\Debug\BBL.dll
+C:\Users\masya\Documents\Locadora\BBL\obj\Debug\BBL.pdb
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\BBL.dll.config
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\BBL.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\BBL.pdb
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\DAL.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\EntityFramework.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\Models.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\DAL.pdb
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\Models.pdb
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\EntityFramework.xml
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\obj\Debug\BBL.dll
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\BBL\obj\Debug\BBL.pdb
