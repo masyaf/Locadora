@@ -21,17 +21,18 @@ namespace DAL
             set;
         }
 
-        public BaseContext()  : base("LocadoraContext")
+        public BaseContext()
+            : base("LocadoraContext")
         {
-           
-            
+
+
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
             Configuration.AutoDetectChangesEnabled = false;
             Configuration.ValidateOnSaveEnabled = false;
             Database.SetInitializer<BaseContext<T>>(null);
         }
-         
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 
@@ -59,9 +60,9 @@ namespace DAL
         public virtual int Save(T model)
         {
             Database.Log = Console.WriteLine;
-                this.DbSet.Add(model);
-                return this.SaveChanges();
-      
+            this.DbSet.Add(model);
+            return this.SaveChanges();
+
         }
 
         public override int SaveChanges()
@@ -88,9 +89,10 @@ namespace DAL
 
 
 
+
         public virtual int Update(T model)
         {
-            
+
             var entry = this.Entry(model);
             if (entry.State == EntityState.Detached)
                 this.DbSet.Attach(model);
@@ -101,8 +103,10 @@ namespace DAL
 
         public virtual void Delete(int code)
         {
+            var EntityToDelete = GetByCode(code);
+            Entry(EntityToDelete).State = EntityState.Deleted;
             this.SaveChanges();
-        } 
+        }
 
         public virtual IEnumerable<T> GetAll()
         {
@@ -116,7 +120,7 @@ namespace DAL
 
         public virtual IEnumerable<T> Where(Expression<Func<T, bool>> expression)
         {
-            
+
             return this.DbSet.Where(expression);
         }
 

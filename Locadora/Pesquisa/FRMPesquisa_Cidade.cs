@@ -18,30 +18,12 @@ namespace Locadora.Pesquisa
     public partial class FRMPesquisa_Cidade : Form
     {
         private CityService service;
-        private string Source;
-        private Customer Customer;
-        private Employee Employee;
         public City CitySelected;
         public FRMPesquisa_Cidade()
         {
             InitializeComponent();
             service = new CityService();
-         
-
         }
-      
-        public FRMPesquisa_Cidade(string source, Employee employee)
-        {
-            InitializeComponent();
-            service = new CityService();
-
-            Source = source;
-            Employee = employee;
-
-
-        }
-
-        #region Botão
 
         private void BTNConfirmar_Click(object sender, EventArgs e)
         {
@@ -57,49 +39,15 @@ namespace Locadora.Pesquisa
                 State = Convert.ToString(DGVCidade.CurrentRow.Cells[2].Value)
 
             };
-
-
-            /*
-             * 
-            if (!string.IsNullOrWhiteSpace(Source))
-            {
-                if (Source.Equals("FRMCliente"))
-                {
-
-                    Customer.CityCode = Convert.ToInt32(DGVCidade.CurrentRow.Cells[0].Value);
-                    FRMCliente frmCliente = new FRMCliente(Customer);
-
-                    this.Hide();
-                    frmCliente.ShowDialog();
-                }else  if (Source.Equals("FRMFuncionario"))
-                    {
-                        Employee.CityCode = Convert.ToInt32(DGVCidade.CurrentRow.Cells[0].Value);
-                        FRMFuncionario frmFuncionario = new FRMFuncionario(Employee);
-
-                        this.Hide();
-                        frmFuncionario.ShowDialog();
-                    }
-
-            }
-            else
-            {
-                FRMCidade frmCity = new FRMCidade(city);
-                this.Hide();
-                frmCity.ShowDialog();
-            }
-             * */
-
-
-            this.Close();
+            Close();
 
         }
 
         private void BTNSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        #endregion
 
         #region Load
 

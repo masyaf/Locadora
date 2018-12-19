@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository.Interfaces
 {
-   public  interface ILoanRepository : IUnitOfWork<Loan>
+    public interface ILoanRepository : IUnitOfWork<Loan>
     {
-         List<Loan> findByName(string name);
+        List<Loan> findByName(string name);
 
-       List<Loan>  GetAllLoanWithMoviesAndLoans();
-       IQueryable<Loan> GetAllLoanWithCustomer();
+        List<Loan> GetAllLoanWithMoviesAndLoans();
+        List<Loan> GetAllLoanWithCustomer();
+        Loan GetLoanWithMoviesByCode(int code);
+        List<Loan> GetAllLoanWithCustomerByReturned();
+        List<Loan> GetAllLoanWithCustomerByCustomerName(string customerName);
+        List<Loan> GetAllLoanWithCustomerByCustomerName(string customerName, bool completed);
     }
 }

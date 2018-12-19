@@ -70,6 +70,7 @@
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\EmployeeRepository.cs" />
     <Compile Include="Repository\GenderRepository.cs" />
+    <Compile Include="Repository\Interfaces\ICityRepository.cs" />
     <Compile Include="Repository\Interfaces\ICustomerRepository.cs" />
     <Compile Include="Repository\Interfaces\IEmployeeRepository.cs" />
     <Compile Include="Repository\Interfaces\IGenderRepository.cs" />

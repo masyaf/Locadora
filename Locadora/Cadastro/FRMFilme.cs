@@ -23,9 +23,12 @@ namespace Locadora.Cadastro
         private GenderService GenderService;
         private TypeMovieService TypeMovieService;
         private RecorderService RecorderService;
+        private int MovieCodeSelected;
+        private Movie Movie;
         public FRMFilme()
         {
             InitializeComponent();
+            Movie = new Movie();
         }
 
         #region Botão
@@ -36,32 +39,31 @@ namespace Locadora.Cadastro
 
             if (ValidatedFormMovie())
             {
-                var moveToSaveOrUpdate = MovieFromForm();
+                MovieFromForm();
                 MovieService = new MovieService();
-                if (string.IsNullOrEmpty(TBXCodigo.Text) || moveToSaveOrUpdate.MovieCode == 0)
+                if (string.IsNullOrEmpty(TBXCodigo.Text) || Movie.MovieCode == 0)
                 {
-                    MovieService.Save(moveToSaveOrUpdate);
+                    MovieService.Save(Movie);
                 }
                 else
                 {
 
-                    MovieService.Update(moveToSaveOrUpdate);
+                    MovieService.Update(Movie);
                 }
+                ClearFormMovie();
             }
 
-            ClearFormMovie();
+           
 
         }
-        public Movie MovieFromForm()
+        public void MovieFromForm()
         {
-            var Movie = new Movie()
-            {
-                Title = TBXTitulo.Text,
-                Stock = Convert.ToInt32(TBXEstoque.Text),
-                YearProduction = Convert.ToInt32(TBXAnoLancamento.Text),
-                Duration = Convert.ToInt32(TBXDuracao.Text)
+            
+             Movie.Title = TBXTitulo.Text;
+             Movie.Stock = Convert.ToInt32(TBXEstoque.Text);
+             Movie.YearProduction = Convert.ToInt32(TBXAnoLancamento.Text);
+             Movie. Duration = Convert.ToInt32(TBXDuracao.Text);
 
-            };
             var RankingSelect = GetRankingSelectByName();
             Movie.RankingCode = RankingSelect.RankingCode;
 
@@ -73,7 +75,7 @@ namespace Locadora.Cadastro
 
             var RecorderSelect = GetRecorderSelectByName();
             Movie.RecorderCode = RecorderSelect.RecorderCode;
-            return Movie;
+          
 
 
         }
@@ -170,12 +172,34 @@ namespace Locadora.Cadastro
             }
             return true;
         }
+        private void ShowMovieInForm()
+        {
+            TBXCodigo.Text = Convert.ToString(Movie.MovieCode);
+            TBXTitulo.Text =  Convert.ToString(Movie.Title);
+            TBXEstoque.Text = Convert.ToString(Movie.Stock);
+            TBXDuracao.Text = Convert.ToString(Movie.Duration);
+            TBXAnoLancamento.Text = Convert.ToString(Movie.YearProduction);
+            CBClassificacao.SelectedItem = Convert.ToString(Movie.Ranking.Name);
+            CBGenero.SelectedItem = Movie.Gender.Name;
+            CBGravadora.SelectedItem = Movie.Recorder.Name;
+            CBTipo.SelectedItem = Movie.TypeMovie.Name;
 
+        }
         private void BTNPesquisar_Click(object sender, EventArgs e)
         {
             FRMPesquisa_Filme frm = new FRMPesquisa_Filme();
-            Hide();
             frm.ShowDialog();
+            MovieService = new MovieService();
+            MovieCodeSelected = frm.MovieCodeSelected;
+            if (MovieCodeSelected > 0)
+            {
+                Movie = MovieService.GetMovieWithAllInfoByCode(MovieCodeSelected);
+                ShowMovieInForm();
+            }
+
+           
+
+           
         }
 
         private void BTNSair_Click(object sender, EventArgs e)

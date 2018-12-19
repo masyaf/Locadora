@@ -14,5 +14,9 @@ namespace DAL.Repository
         {
             return DbSet.Include("City").ToList();
         }
+        public override IEnumerable<Customer> GetAll()
+        {
+            return DbSet.Select(c => new Customer() { CustomerCode = c.CustomerCode, Name = c.Name }).ToList();
+        }
     }
 }

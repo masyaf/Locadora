@@ -54,9 +54,33 @@ namespace BLL.Service
         }
 
 
-        public IQueryable<Loan> GetAllLoanWithCustomer()
+        public List<Loan> GetAllLoanWithCustomer()
         {
             return LoanRepository.GetAllLoanWithCustomer();
+        }
+
+
+        public Loan GetLoanWithMoviesByCode(int code)
+        {
+            return LoanRepository.GetLoanWithMoviesByCode(code);
+        }
+
+
+        public List<Loan> GetAllLoanWithCustomerByReturned()
+        {
+            return LoanRepository.GetAllLoanWithCustomerByReturned();
+        }
+
+
+        public List<Loan> GetAllLoanWithCustomerByCustomerName(string customerName)
+        {
+            return LoanRepository.GetAllLoanWithCustomerByCustomerName(customerName);
+        }
+
+
+        public List<Loan> GetAllLoanWithCustomerByCustomerName(string customerName, bool completed)
+        {
+            return LoanRepository.GetAllLoanWithCustomerByCustomerName(customerName, completed);
         }
     }
 }

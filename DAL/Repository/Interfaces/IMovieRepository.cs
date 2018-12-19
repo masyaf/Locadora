@@ -10,6 +10,8 @@ namespace DAL.Repository.Interfaces
     public interface IMovieRepository : IUnitOfWork<Movie>
     {
        List<Movie> GetAllMoviesWithTypeMovies();
+       List<Movie> GetAllMoviesWithTypeMoviesByName(String name);
+       Movie GetMovieWithAllInfoByCode(int movieCode);
     }
 
 }

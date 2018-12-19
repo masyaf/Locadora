@@ -116,8 +116,16 @@ namespace Locadora.Cadastro
             }
             else
             {
+
                 var typeMovieCode = Convert.ToInt32(TBXCodigo.Text);
-                service.Delete(typeMovieCode);
+                try
+                {
+                    service.Delete(typeMovieCode);
+                }catch(Exception ex){
+                    Console.WriteLine(ex.Message);
+                    MessageBox.Show("Não é possivel excluir esta informação, pois a mesma está relacionada com outros dados");
+                }
+              
             }
             LoadDataGridViewTypeMovie();
             ClearFormTypeMovie();

@@ -144,6 +144,7 @@ C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\bin\Debug\Locadora.
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\bin\Debug\EntityFramework.dll
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\bin\Debug\Locadora.exe.config
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\bin\Debug\Locadora.pdb
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\bin\Debug\BBL.dll
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\bin\Debug\Models.dll
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\bin\Debug\DAL.dll
@@ -172,4 +173,3 @@ C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\obj\Debug\Locadora.
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\obj\Debug\Locadora.csproj.GenerateResource.Cache
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\obj\Debug\Locadora.exe
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\obj\Debug\Locadora.pdb
-C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Locadora\bin\Debug\Locadora.pdb

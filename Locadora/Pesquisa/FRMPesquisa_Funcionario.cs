@@ -93,7 +93,7 @@ namespace Locadora.Pesquisa
         private void LoadDataGridView()
         {
 
-            AllEmployees = EmployeeService.AllEmployeesWithCity().ToList();
+            AllEmployees = EmployeeService.All().ToList();
             for (int i = 0; i < AllEmployees.Count(); i++)
             {
                 DGVFuncionario.Rows.Add(AllEmployees[i].EmployeeCode.ToString(), AllEmployees[i].Name);

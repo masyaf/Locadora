@@ -13,45 +13,61 @@ namespace BLL.Service
 {
     public class MovieService : IMovieService
     {
-        private IMovieRepository IUnitOfWorkMovie;
+        private IMovieRepository MovieRepository;
 
         public MovieService()
         {
-            IUnitOfWorkMovie = new MovieRepository();
+            MovieRepository = new MovieRepository();
         }
         public void Save(Movie entity)
         {
-            IUnitOfWorkMovie.Save(entity);
+            MovieRepository.Save(entity);
         }
 
         public void Delete(int code)
         {
-            IUnitOfWorkMovie.Delete(code);
+            MovieRepository.Delete(code);
         }
 
         public void Update(Movie entity)
         {
-            IUnitOfWorkMovie.Update(entity);
+            entity.Recorder = null;
+            entity.Gender = null;
+            entity.Ranking = null;
+            entity.TypeMovie = null;
+            MovieRepository.Update(entity);
         }
 
         public Movie GetByCode(int code)
         {
-            return IUnitOfWorkMovie.GetByCode(code);
+            return MovieRepository.GetByCode(code);
         }
 
         public List<Movie> findByName(string name)
         {
-            return IUnitOfWorkMovie.Where(m => m.Title.ToLower().Equals(name.ToLower())).ToList();
+            return MovieRepository.Where(m => m.Title.ToLower().Equals(name.ToLower())).ToList();
         }
 
         public IEnumerable<Movie> All()
         {
-            return IUnitOfWorkMovie.GetAll();
+            return MovieRepository.GetAll();
         }
 
         public List<Movie> GetAllMoviesWithTypeMovies()
         {
-           return  IUnitOfWorkMovie.GetAllMoviesWithTypeMovies();
+           return  MovieRepository.GetAllMoviesWithTypeMovies();
+        }
+
+
+        public List<Movie> GetAllMoviesWithTypeMoviesByName(string movieName)
+        {
+            return MovieRepository.GetAllMoviesWithTypeMoviesByName(movieName);
+        }
+
+
+        public Movie GetMovieWithAllInfoByCode(int movieCode)
+        {
+           return MovieRepository.GetMovieWithAllInfoByCode(movieCode);
         }
     }
 }

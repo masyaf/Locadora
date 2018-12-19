@@ -10,6 +10,10 @@ namespace BLL.Service.Interfaces
   public  interface ILoanService : IBaseService<Loan>
     {
       List<Loan> GetAllLoanWithMoviesAndLoans();
-      IQueryable<Loan> GetAllLoanWithCustomer();
+      List<Loan> GetAllLoanWithCustomer();
+      Loan GetLoanWithMoviesByCode(int code);
+      List<Loan> GetAllLoanWithCustomerByReturned();
+      List<Loan> GetAllLoanWithCustomerByCustomerName(string customerName);
+      List<Loan> GetAllLoanWithCustomerByCustomerName(string customerName, bool completed);
     }
 }

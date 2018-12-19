@@ -81,10 +81,16 @@ namespace Locadora.Cadastro
         {
             if (!string.IsNullOrEmpty(TBXCodigo.Text))
             {
+                try{
                 var rankingCode = Convert.ToInt32(TBXCodigo.Text);
                 service.Delete(rankingCode);
                 ClearFormRanking();
                 LoadDataGridRanking();
+                }catch(Exception ex){
+                    MessageBox.Show("Esta entidade não pode ser excluida, pois está relacionada com outros dados");
+                    Console.WriteLine(ex.Message);
+                }
+
 
             }
             else

@@ -4,6 +4,7 @@ using DAL.Repository;
 using Models.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,14 @@ namespace BLL.Service
 
         public void Delete(int code)
         {
-            IUnitOfWork.Delete(code);
+            try
+            {
+                IUnitOfWork.Delete(code);
+            }catch(DbUpdateException ex){
+                Console.WriteLine(ex.Message);
+                throw new Exception("Não é possível excluir esta entidade, pois há dados vinculados à ela");
+            }
+        
         }
 
         public void Update(TypeMovie entity)

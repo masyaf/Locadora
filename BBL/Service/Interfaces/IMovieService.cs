@@ -10,6 +10,8 @@ namespace BLL.Service.Interfaces
     public interface IMovieService  : IBaseService<Movie>
     {
         List<Movie> GetAllMoviesWithTypeMovies();
+        List<Movie>  GetAllMoviesWithTypeMoviesByName(string movieName);
+        Movie GetMovieWithAllInfoByCode(int movieCode);
 
     }
 }

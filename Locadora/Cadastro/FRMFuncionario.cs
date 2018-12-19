@@ -20,7 +20,6 @@ namespace Locadora.Cadastro
     public partial class FRMFuncionario : Form
     {
         private IEmployeeService EmployeeService;
-        private IBaseService<City> cityService;
         public static Employee Employee;
         private City CitySelected;
         public FRMFuncionario()

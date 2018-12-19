@@ -6,13 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.Repository.Interfaces;
 
 namespace BLL.Service
 {
     public class CityService : IBaseService<City>
     {
 
-        IUnitOfWork<City> UnitOfWorkCity { get; set; }
+        ICityRepository UnitOfWorkCity { get; set; }
 
         public CityService()
         {

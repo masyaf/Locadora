@@ -20,7 +20,6 @@ namespace Locadora.Cadastro
     public partial class FRMCliente : Form
     {
         private ICustomerService CustomerService;
-        private IBaseService<City> cityService;
         public static Customer Customer;
         private City CitySelected;
         public FRMCliente()
@@ -95,18 +94,19 @@ namespace Locadora.Cadastro
         }
         private void BTNPesquisar_Click(object sender, EventArgs e)
         {
-           
+
             FRMPesquisa_Cliente frmPesquisa = new FRMPesquisa_Cliente();
             frmPesquisa.ShowDialog();
             try
             {
                 Customer = frmPesquisa.CustomerSelect;
-            }catch(NullReferenceException ex)
+            }
+            catch (NullReferenceException ex)
             {
                 Customer = new Customer();
                 Console.WriteLine(ex.StackTrace);
             }
-           
+
             CustomerToForm();
 
         }
@@ -133,10 +133,10 @@ namespace Locadora.Cadastro
             frmPesquisaCidade.ShowDialog();
 
             CitySelected = frmPesquisaCidade.CitySelected;
-            TBXUf.Text = CitySelected.State; 
+            TBXUf.Text = CitySelected.State;
             TBXCidade.Text = CitySelected.Name;
             Customer.CityCode = CitySelected.CityCode;
-           
+
         }
 
         private void CustomerToForm()
@@ -155,10 +155,12 @@ namespace Locadora.Cadastro
                 TBXDataNascimento.Text = Convert.ToString(Customer.DateBirth, CultureInfo.InvariantCulture);
                 TBXCidade.Text = Customer.City.Name;
                 Customer.CityCode = Customer.City.CityCode;
-                TBXUf.Text = Customer.City.State; 
-            }catch(NullReferenceException ex){
+                TBXUf.Text = Customer.City.State;
+            }
+            catch (NullReferenceException ex)
+            {
                 TBXCodigo.Text = string.Empty;
-                Console.WriteLine( ex.StackTrace);
+                Console.WriteLine(ex.StackTrace);
             }
 
 
@@ -197,12 +199,13 @@ namespace Locadora.Cadastro
                 MessageBox.Show("O campo data de nascimento deve ser preenchido");
                 return false;
             }
-            if(string.IsNullOrEmpty(TBXBairro.Text))
+            if (string.IsNullOrEmpty(TBXBairro.Text))
             {
                 MessageBox.Show("O campo bairro deve ser preenchido");
                 return false;
             }
-            if(string.IsNullOrWhiteSpace(TBXCidade.Text)){
+            if (string.IsNullOrWhiteSpace(TBXCidade.Text))
+            {
                 MessageBox.Show("O campo cidade deve ser preenchido");
                 return false;
             }
@@ -235,7 +238,7 @@ namespace Locadora.Cadastro
             Customer.Number = TBXNumero.Text;
             Customer.Neighborhood = TBXBairro.Text;
             Customer.DateBirth = GetDateBirth();
-           
+
         }
     }
 }

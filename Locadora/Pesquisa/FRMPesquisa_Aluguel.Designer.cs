@@ -35,11 +35,11 @@
             this.BTNPesquisar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.DGVAluguel = new System.Windows.Forms.DataGridView();
-            this.BTNConfirmar = new System.Windows.Forms.Button();
-            this.BTNSair = new System.Windows.Forms.Button();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BTNConfirmar = new System.Windows.Forms.Button();
+            this.BTNSair = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVAluguel)).BeginInit();
             this.SuspendLayout();
@@ -116,6 +116,29 @@
             this.DGVAluguel.TabIndex = 33;
             this.DGVAluguel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVAluguel_CellClick);
             // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "LoanCode";
+            this.Nome.HeaderText = "Código";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 70;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "LoanDate";
+            this.Column1.HeaderText = "Data";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Idade
+            // 
+            this.Idade.DataPropertyName = "DateLoan";
+            this.Idade.HeaderText = "Nome Cliente";
+            this.Idade.Name = "Idade";
+            this.Idade.ReadOnly = true;
+            this.Idade.Width = 300;
+            // 
             // BTNConfirmar
             // 
             this.BTNConfirmar.Image = ((System.Drawing.Image)(resources.GetObject("BTNConfirmar.Image")));
@@ -139,29 +162,6 @@
             this.BTNSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BTNSair.UseVisualStyleBackColor = true;
             this.BTNSair.Click += new System.EventHandler(this.BTNSair_Click);
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "LoanCode";
-            this.Nome.HeaderText = "Código";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 70;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "LoanDate";
-            this.Column1.HeaderText = "Data";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Idade
-            // 
-            this.Idade.DataPropertyName = "DateLoan";
-            this.Idade.HeaderText = "Nome Cliente";
-            this.Idade.Name = "Idade";
-            this.Idade.ReadOnly = true;
-            this.Idade.Width = 300;
             // 
             // FRMPesquisa_Aluguel
             // 

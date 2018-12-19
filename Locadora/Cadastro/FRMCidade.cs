@@ -63,7 +63,8 @@ namespace Locadora.Cadastro
         private void BTNGravar_Click(object sender, EventArgs e)
         {
 
-           var city = new City() {
+            City  = new City()
+            {
                CityCode = (string.IsNullOrEmpty(TBXCodigo.Text)) ? new int() : int.Parse(TBXCodigo.Text),
                 Name = TBXCidade.Text.ToString(),
                 State = TBXUf.Text.ToString()
@@ -74,12 +75,12 @@ namespace Locadora.Cadastro
                 if (string.IsNullOrEmpty(TBXCodigo.Text))
                 {
 
-                    service.Save(city);
+                    service.Save(City);
                     MessageBox.Show("Cidade adicioanda com Sucesso!");
                 }
                 else
                 {
-                    service.Update(city);
+                    service.Update(City);
                     MessageBox.Show("Cidade Atualizada com Sucesso!");
                 }
                 ClearFormCity();
@@ -119,8 +120,10 @@ namespace Locadora.Cadastro
         private void BTNPesquisar_Click(object sender, EventArgs e)
         {
             FRMPesquisa_Cidade frm = new FRMPesquisa_Cidade();
-            this.Close();
             frm.ShowDialog();
+            City  = frm.CitySelected;
+            LoadDataFormCity();
+
            
         }
 

@@ -15,5 +15,6 @@ namespace DAL.Repository
         {
             return DbSet.Include("City").ToList();
         }
+
     }
 }
