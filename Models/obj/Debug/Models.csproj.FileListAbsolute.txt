@@ -10,3 +10,4 @@ C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Models\bin\Debug\Models.dll
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Models\bin\Debug\Models.pdb
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Models\obj\Debug\Models.dll
 C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Models\obj\Debug\Models.pdb
+C:\Users\DEVELOPER-01\Documents\Nova Pasta\Locadora\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
